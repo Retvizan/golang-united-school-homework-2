@@ -13,8 +13,13 @@ const pi = math.Pi
 // CalcSquare(10.0, SidesTriangle)
 // CalcSquare(10.0, SidesSquare)
 // CalcSquare(10.0, SidesCircle)
+type myType int
+const SidesTriangle myType = 3
+const SidesSquare myType = 4
+const SidesCircle myType = 0
 
-func CalcSquare(sideLen float64, sidesNum uint16) float64 {
+
+func CalcSquare(sideLen float64, sidesNum myType) float64 {
 	switch sidesNum {
 	case 0:
 		return pi * math.Pow(sideLen, 2)
